@@ -1,0 +1,10 @@
+$columns: 24;
+$column-width: 30px;
+$gutter-width: 10px;
+@for $i from 1 through $columns {
+  .span-#{$i} {
+    width: $i * $column-width + $gutter-width * ( $i - 1 );
+    @if $i == $columns {margin-right:0px;}
+    @else{margin-right:$gutter-width;}
+  }
+}
