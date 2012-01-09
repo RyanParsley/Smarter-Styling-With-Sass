@@ -2,6 +2,7 @@
 $columns: 5;
 $column-width: 120px;
 $gutter-width: 48px;
+
 @mixin column($columns, $last: false) {
   width: ($column-width * $columns) + ($gutter-width * ($columns - 1));
   @if $last != true {
