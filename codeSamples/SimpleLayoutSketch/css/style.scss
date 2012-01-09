@@ -21,9 +21,8 @@ $gutter-width: 48px;
 }
 html{
   background:rgba(0,0,0,.1);
-  //background:#77f;
+  //background:#7f7;
   font-family:verdana, sans-serif;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,.65)), to(rgba(0,0,0,0)));
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,.65), rgba(0,0,0,0));
   background-image:    -moz-linear-gradient(top, rgba(0,0,0,.65), rgba(0,0,0,0));
   background-image:     -ms-linear-gradient(top, rgba(0,0,0,.65), rgba(0,0,0,0));
@@ -31,30 +30,26 @@ html{
 }
 h1,h2,h3,h4,h5, #logo, .cta{font-family: 'Ubuntu Condensed', sans-serif;}
 h1,h2,h3,h4,h5{color:rgba(255,255,255,.3);}
-
 p{margin-bottom:1.5em;}
 body{
   width: $columns * $column-width + ($columns - 1) * $gutter-width;
   margin:0 auto;
-  background:rgba(0,0,0,.1);
 }
 body>header, body>footer{
   background:rgba(0,0,0,.3);
 }
 div[role="main"]{
   @include column(2.5);
-  padding-left: $column-width * .25;
-  padding-right: $column-width * .25;
+  padding-left: ($column-width + $gutter-width)  * .25;
+  padding-right: ($column-width + $gutter-width)  * .25;
   padding-top:1em;
   background:rgba(0,0,0,.2);
-  clear:left;
   float:left;
 }
 body>aside{
   @include column(1.5, true);
-  padding-left: $column-width * .25;
-  padding-right: $column-width * .25;
-  margin-top:1em;
+  padding-left: ($column-width + $gutter-width) * .25;
+  padding-right: ($column-width + $gutter-width) * .25;
   display:block;
   float:left;
   background:rgba(0,0,0,.5);
@@ -100,6 +95,7 @@ body>footer{
 header{
   padding-bottom:24px;
   overflow:hidden;
+  margin-bottom:24px;
   #logo{
     @include column(1.75);
     float:left;
@@ -107,7 +103,7 @@ header{
     color:#fff;
     font-size:3em;
     text-decoration:none;
-    padding-left: ( $gutter-width * .25 );
+    padding-left: ( ($column-width + $gutter-width)  * .25 );
     padding-top:48px;
     padding-bottom:12px;
     &:hover{
@@ -141,6 +137,9 @@ header{
       color:#333;
       display:inline-block;
       text-decoration:none;
+      &:last-child{
+        margin-right:1em;
+      }
       &:hover{
         background:rgba(255,255,255,.5);
       }

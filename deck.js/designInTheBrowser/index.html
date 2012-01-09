@@ -36,21 +36,21 @@
   <body class="deck-container">
 
     <section class="slide" id="title-slide">
-      <h1>Design in the Browser</h1>
+      <h1>Design in the browser</h1>
     </section>
 
     <section class="slide" id="tldr">
       <h2>TLDR</h2>
       <ol>
         <li><h3>Photoshop speaks lies</h3></li>
-        <li><h3>Think about semantics</h3></li>
-        <li><h3>More quality time with your editor</h3></li>
+        <li><h3>Don&rsquo;t give up on semantics</h3></li>
+        <li><h3>Spend more quality time with your text editor</h3></li>
       </ol>
     </section>
 
     <section class="slide" id="Expectations">
       <h2>Realistic Expectations</h2>
-      <h3>For Clients</h3>
+      <h3>For clients</h3>
       <ul>
         <li><h4>Photoshop font rendering is a damn shame</h4></li>
         <li><h4>Browser discrepancies come up sooner</h4></li>
@@ -59,8 +59,8 @@
       <h3>For you</h3>
       <ul>
         <li><h4>Photoshop font rendering is a damn shame</h4></li>
-        <li><h4>Widows, orphans and other typographical concerns</h4></li>
-        <li><h4>Bad Information Architecture due to not thinking</h4></li>
+        <li><h4>Generate ideas in the medium they&rsquo;ll be delivered in.</h4></li>
+        <li><h4>Avoid bad information architecture caused by not thinking</h4></li>
       </ul>
     </section>
 
@@ -88,6 +88,38 @@
       </blockquote>
     </section>
 
+    <section class="slide" id="atOurDisposal">
+      <h2>CSS is filling out nicely</h2> 
+      <ul>
+        <li>
+          <h3>Dropshadows</h3>
+        </li>
+        <li>
+          <h3>Gradients</h3>
+        </li>
+        <li>
+          <h3>Rounded corners</h3>
+        </li>
+        <li>
+          <h3>Border images</h3>
+        </li>
+        <li>
+          <h3>Multiple background images</h3>
+        </li>
+        <li>
+          <h3>Webfonts</h3>
+        </li>
+        <li>
+          <h3>RGBA (Translucency!) </h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="beMindfulOf">
+      <h1>There are some antipattens brewing</h1>
+    </section>
+
+
      <section class="slide" id="whySass">
       <h2>Why use Sass?</h2>
       <ul>
@@ -97,7 +129,7 @@
     </section>
 
     <section class="slide" id="theOld">
-      <h2>CSS Nitty Griddy</h2>
+      <h2>CSS nitty griddy</h2>
       <pre>
 .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {float:left;margin-right:10px;}
 .span-1 {width:30px;}
@@ -153,12 +185,13 @@ $gutter-width: 10px;
     <section class="slide" id="yeahBut">
       <h2>Sure, that&rsquo;s clever, but&hellip;</h2>
       <ul>
-        <li><h3><a href="#">What about all those classes?</a></h3></li>
+        <li><h3>What about all those classes?</h3></li>
         <li><h3>Can we separate markup from style?</h3></li>
+        <li><h3>Doesn't really save typing... I just copy and paste from blueprint.</h3></li>
       </ul>
     </section>
     <section class="slide" id="grid">
-      <h2>Easy Grids</h2>
+      <h2>Grids from mixins</h2>
       <pre>
 @mixin column($columns, $last: false) {
   width: ($column-width * $columns) + ($gutter-width * ($columns - 1));
@@ -178,10 +211,50 @@ $gutter-width: 10px;
     margin-right: $gutter-width - $column-padding - $border-width;
   }
 }</pre>
+      </section>
+
+     <section class="slide" id="starPlayers">
+      <h2>How do you use that?</h2>
+      <pre>
+div[role="main"]{
+  @include column(2.5);
+  padding-left: ($column-width + $gutter-width)  * .25;
+  padding-right: ($column-width + $gutter-width)  * .25;
+  padding-top:1em;
+  background:rgba(0,0,0,.2);
+  float:left;
+}
+
+body>aside{
+  @include column(1.5, true);
+  padding-left: ($column-width + $gutter-width) * .25;
+  padding-right: ($column-width + $gutter-width) * .25;
+  display:block;
+  float:left;
+  background:rgba(0,0,0,.5);
+}</pre>
+      </section>
+
+      <section class="slide" id="sampleLayout">
+        <h2>A real layout sketch</h2> 
+        <img src="layoutSketch.jpg" alt="Layout Sketch">
+      </section>
+
+      <section class="slide" id="wireframe">
+      <h2>HTML version</h2> 
+      <img src="layoutWireframe.jpg" alt="Layout Sketch">
     </section>
-    <section class="slide" id="sampleLayout">
-      <h2>A real layout sketch</h2> 
+    <section class="slide" id="wireframe">
+      <h2>Quick change</h2> 
+      <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
     </section>
+
+     <section class="slide" id="bulletProof?">
+       <h1>Is it bullet proof?</h1>
+     </section>
+    <section class="slide" id="No">
+       <h1>No!</h1>
+     </section>
 
     <section class="slide" id="aprettyslickbutton" >
       <h2> A pretty slick button</h2>
@@ -231,9 +304,9 @@ $gutter-width: 10px;
       </section>
 
       <section class="slide" id="minimaldrupaltheme">
-        <h2 >Minimal Drupal Theme</h2>
+        <h2 >Minimal Drupal theme</h2>
         <ul>
-          <li><h3>Not a great way for you to learn Drupal Themeing (I warned you)</h3></li>
+          <li><h3>Not a great way for you to learn Drupal themeing (I warned you)</h3></li>
           <li><h3>Not minimal in terms of appearance</h3></li>
           <li><h3>Devel module</h3></li>
         </ul>
@@ -258,14 +331,16 @@ $gutter-width: 10px;
       <section class="slide" id="morereading">
         <h2 >More Reading</h2>
         <ul>
+          <li><a href="http://www.stuffandnonsense.co.uk/blog/about/time_to_stop_showing_clients_static_design_visuals/">Time to stop showing clients static design visuals</a></li>
           <li><a href="http://24ways.org/2009/make-your-mockup-in-markup" title="Make your mockup in markup">Meagan Fisher&#8217;s 24ways post</a></li>
           <li><a href="http://jeffcroft.com/sidenotes/2009/may/20/applying-oop-concepts-css/" title="On applying OOP concepts to CSS">Jeff Croft on Object Oriented CSS</a></li>
           <li><a href="http://thesassway.com/" title="The Sass Way">The Sass Way</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Dieter_Rams#cite_note-0">Dieter Rams</a></li>
         </ul>
       </section>
 
       <section class="slide" id="thanks" >
-        <h2>Thanks!</h2>
+        <h1>Thanks!</h1>
       </section>
 
       <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>

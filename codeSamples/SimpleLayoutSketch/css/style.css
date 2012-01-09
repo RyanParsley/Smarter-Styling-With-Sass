@@ -5,7 +5,6 @@
 html {
   background: rgba(0, 0, 0, 0.1);
   font-family: verdana, sans-serif;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
   background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
@@ -22,8 +21,7 @@ p {
 
 body {
   width: 792px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.1); }
+  margin: 0 auto; }
 
 body > header, body > footer {
   background: rgba(0, 0, 0, 0.3); }
@@ -31,18 +29,16 @@ body > header, body > footer {
 div[role="main"] {
   width: 372px;
   margin-right: 48px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 42px;
+  padding-right: 42px;
   padding-top: 1em;
   background: rgba(0, 0, 0, 0.2);
-  clear: left;
   float: left; }
 
 body > aside {
   width: 204px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: 1em;
+  padding-left: 42px;
+  padding-right: 42px;
   display: block;
   float: left;
   background: rgba(0, 0, 0, 0.5); }
@@ -80,7 +76,8 @@ body > footer {
 
 header {
   padding-bottom: 24px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 24px; }
   header #logo {
     width: 246px;
     margin-right: 48px;
@@ -89,7 +86,7 @@ header {
     color: #fff;
     font-size: 3em;
     text-decoration: none;
-    padding-left: 12px;
+    padding-left: 42px;
     padding-top: 48px;
     padding-bottom: 12px; }
     header #logo:hover {
@@ -119,5 +116,7 @@ header {
       color: #333;
       display: inline-block;
       text-decoration: none; }
+      header nav a:last-child {
+        margin-right: 1em; }
       header nav a:hover {
         background: rgba(255, 255, 255, 0.5); }
