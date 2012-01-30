@@ -36,55 +36,14 @@
   <body class="deck-container">
 
     <section class="slide" id="title-slide">
-      <h1>Design in the browser</h1>
+      <h1>Smarter styling with Sass</h1>
     </section>
 
     <section class="slide" id="tldr">
       <h2>TLDR</h2>
       <ol>
-        <li><h3>Photoshop speaks lies</h3></li>
         <li><h3>Don&rsquo;t give up on semantics</h3></li>
         <li><h3>Spend more quality time with your text editor</h3></li>
-      </ol>
-    </section>
-
-    <section class="slide" id="Expectations">
-      <h2>Realistic Expectations</h2>
-      <h3>For clients</h3>
-      <ul>
-        <li><h4>Photoshop font rendering is a damn shame</h4></li>
-        <li><h4>Browser discrepancies come up sooner</h4></li>
-        <li><h4>Don&#8217;t make them use their imagination</h4></li>
-      </ul>
-      <h3>For you</h3>
-      <ul>
-        <li><h4>Photoshop font rendering is a damn shame</h4></li>
-        <li><h4>Generate ideas in the medium they&rsquo;ll be delivered in</h4></li>
-        <li><h4>Avoid bad information architecture caused by not thinking</h4></li>
-      </ul>
-    </section>
-
-    <section class="slide" id="howItWorks">
-      <h2>Good markup <em>is</em> good design</h2>
-      <blockquote cite="http://www.brainyquote.com/quotes/quotes/s/stevejobs169129.html">
-        <p>Design is not just what it looks like and feels like. Design is how it works.</p>
-        <p><cite>Steve Jobs</cite></p>
-      </blockquote>
-    </section>
-
-    <section class="slide" id="WhatIsDesign">
-      <h2>Rams&rsquo; ten principles of &ldquo;good design&rdquo;</h2>
-      <ol>
-        <li><h3>Is innovative</h3></li>
-        <li><h3>Makes a product useful</h3></li>
-        <li><h3>Is aesthetic</h3></li>
-        <li><h3>Makes a product understandable</h3></li>
-        <li><h3>Is unobtrusive </h3></li>
-        <li><h3>Is honest </h3></li>
-        <li><h3>Is long-lasting</h3></li>
-        <li><h3>Is thorough down to the last detail</h3></li>
-        <li><h3>Is environmentally friendly</h3></li>
-        <li><h3>Is as little design as possible </h3></li>
       </ol>
     </section>
 
@@ -118,7 +77,6 @@
     <section class="slide" id="beMindfulOf">
       <h1>There are some antipattens brewing</h1>
     </section>
-
 
      <section class="slide" id="whySass">
       <h2>Why use Sass?</h2>
@@ -241,33 +199,33 @@ body>aside{
       </section>
 
       <section class="slide" id="wireframe">
-      <h2>HTML version</h2> 
-      <img src="layoutWireframe.jpg" alt="Layout Sketch">
-    </section>
-    <section class="slide" id="wireframe">
-      <h2>Quick change</h2> 
-      <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
-    </section>
+        <h2>HTML version</h2> 
+        <img src="layoutWireframe.jpg" alt="Layout Sketch">
+      </section>
+      <section class="slide" id="wireframe">
+        <h2>Quick change</h2> 
+        <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
+      </section>
 
-     <section class="slide" id="bulletProof?">
-       <h1>Is it bullet proof?</h1>
-     </section>
-    <section class="slide" id="No">
-       <h1>No!</h1>
-     </section>
+      <section class="slide" id="bulletProof?">
+        <h1>Is it bullet proof?</h1>
+      </section>
+      <section class="slide" id="No">
+        <h1>No!</h1>
+      </section>
 
-     <section class="slide" id="No">
-       <h2>That&rsquo;s where compass comes in</h2>
-       <ul>
+      <section class="slide" id="No">
+        <h2>That&rsquo;s where compass comes in</h2>
+        <ul>
          <li>Jquery for CSS</li>
          <li>Common problems solved by the community</li>
          <li>Extra goodies like project generation</li>
-       </ul>
-     </section>
+        </ul>
+      </section>
 
-    <section class="slide" id="aprettyslickbutton" >
-      <h2> A pretty slick button</h2>
-        <pre>
+      <section class="slide" id="aprettyslickbutton" >
+        <h2> A pretty slick button</h2>
+          <pre>
 @mixin clean-pill-button($background: #666, $height: 48px){
   $shadow: darken($background, 20%);
   background: $background;
@@ -297,7 +255,6 @@ body>aside{
         <h2>What that looks like</h2>
         <img src="buttonscreenshot.png"/>
       </section>
-
       <section class="slide" id="gridBG">
         <h2>Visual helper for your grid</h2>
         <ul>
@@ -312,36 +269,14 @@ $grid-background-baseline-height: 24px;
 $grid-background-offset:24px;
 
 body{ @include grid-background();}</pre>
-</section>
-
-
-      <section class="slide" id="serve">
-        <h2 >Serve</h2>
-        <ul>
-          <li><h3>Dynamic when editing</h3></li>
-          <li><h3>Makes vanilla HTML and CSS from Haml and Sass</h3></li>
-          <li><h3>Awesome for prototyping</h3></li>
-        </ul>
       </section>
-
-      <section class="slide" id="minimaldrupaltheme">
-        <h2 >Minimal Drupal theme</h2>
-        <ul>
-          <li><h3>Not a great way for you to learn Drupal themeing (I warned you)</h3></li>
-          <li><h3>Not minimal in terms of appearance</h3></li>
-          <li><h3>Devel module</h3></li>
-        </ul>
-      </section>
-
       <section class="slide" id="tools" >
         <h2 >Tools</h2>
         <ul>
           <li><a href="http://sass-lang.com/" title="Sass">Sass</a></li>
           <li><a href="http://compass-style.org/" title="Compass">Compass</a></li>
-          <li><a href="http://get-serve.com/" title="Serve">Serve</a></li>
           <li><a href="http://lessframework.com/" title="Less Framework">Less Framework</a></li>
           <li><a href="https://github.com/RyanParsley/Serve-Less" title="Serve-Less">My Serve based starting point</a></li>
-          <li><a href="http://drupal.org/sandbox/RyanParsley/1317494" title="Lessie">My Drupal starter theme</a></li>
         </ul>
       </section>
 
@@ -352,7 +287,6 @@ body{ @include grid-background();}</pre>
           <li><a href="http://24ways.org/2009/make-your-mockup-in-markup" title="Make your mockup in markup">Meagan Fisher&#8217;s 24ways post</a></li>
           <li><a href="http://jeffcroft.com/sidenotes/2009/may/20/applying-oop-concepts-css/" title="On applying OOP concepts to CSS">Jeff Croft on Object Oriented CSS</a></li>
           <li><a href="http://thesassway.com/" title="The Sass Way">The Sass Way</a></li>
-          <li><a href="http://en.wikipedia.org/wiki/Dieter_Rams#cite_note-0">Dieter Rams</a></li>
           <li><a href="http://smacss.com/">SMACSS</a></li>
         </ul>
       </section>
