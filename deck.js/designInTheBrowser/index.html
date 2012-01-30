@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Design in the browser</title>
+
+    <meta name="description" content="A look at tools and techniques to
+    help you jump straight from paper to text editor">
+    <meta name="author" content="RyanParsley">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <!-- Core and extension CSS files -->
+    <link rel="stylesheet" href="../core/deck.core.css">
+    <link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+
+    <!-- Theme CSS files (menu swaps these out) -->
+    <link rel="stylesheet" id="style-theme-link"
+    href="../themes/style/swiss.css">
+    <link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
+
+    <!-- Custom CSS just for this page -->
+    <link rel="stylesheet" href="designInTheBrowser.css">
+
+    <script src="../modernizr.custom.js"></script>
+  </head>
+
+  <body class="deck-container">
+
+    <section class="slide" id="title-slide">
+      <h1>Design in the browser</h1>
+    </section>
+
+    <section class="slide" id="tldr">
+      <h2>TLDR</h2>
+      <ol>
+        <li><h3>Photoshop speaks lies</h3></li>
+        <li><h3>Don&rsquo;t give up on semantics</h3></li>
+        <li><h3>Spend more quality time with your text editor</h3></li>
+      </ol>
+    </section>
+
+    <section class="slide" id="Expectations">
+      <h2>Realistic Expectations</h2>
+      <h3>For clients</h3>
+      <ul>
+        <li><h4>Photoshop font rendering is a damn shame</h4></li>
+        <li><h4>Browser discrepancies come up sooner</h4></li>
+        <li><h4>Don&#8217;t make them use their imagination</h4></li>
+      </ul>
+      <h3>For you</h3>
+      <ul>
+        <li><h4>Photoshop font rendering is a damn shame</h4></li>
+        <li><h4>Generate ideas in the medium they&rsquo;ll be delivered in</h4></li>
+        <li><h4>Avoid bad information architecture caused by not thinking</h4></li>
+      </ul>
+    </section>
+
+    <section class="slide" id="howItWorks">
+      <h2>Good markup <em>is</em> good design</h2>
+      <blockquote cite="http://www.brainyquote.com/quotes/quotes/s/stevejobs169129.html">
+        <p>Design is not just what it looks like and feels like. Design is how it works.</p>
+        <p><cite>Steve Jobs</cite></p>
+      </blockquote>
+    </section>
+
+    <section class="slide" id="WhatIsDesign">
+      <h2>Rams&rsquo; ten principles of &ldquo;good design&rdquo;</h2>
+      <ol>
+        <li><h3>Is innovative</h3></li>
+        <li><h3>Makes a product useful</h3></li>
+        <li><h3>Is aesthetic</h3></li>
+        <li><h3>Makes a product understandable</h3></li>
+        <li><h3>Is unobtrusive </h3></li>
+        <li><h3>Is honest </h3></li>
+        <li><h3>Is long-lasting</h3></li>
+        <li><h3>Is thorough down to the last detail</h3></li>
+        <li><h3>Is environmentally friendly</h3></li>
+        <li><h3>Is as little design as possible </h3></li>
+      </ol>
+    </section>
+
+    <section class="slide" id="atOurDisposal">
+      <h2>CSS is filling out nicely</h2> 
+      <ul>
+        <li>
+          <h3>Dropshadows</h3>
+        </li>
+        <li>
+          <h3>Gradients</h3>
+        </li>
+        <li>
+          <h3>Rounded corners</h3>
+        </li>
+        <li>
+          <h3>Border images</h3>
+        </li>
+        <li>
+          <h3>Multiple background images</h3>
+        </li>
+        <li>
+          <h3>Webfonts</h3>
+        </li>
+        <li>
+          <h3>RGBA (Translucency!) </h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="beMindfulOf">
+      <h1>There are some antipattens brewing</h1>
+    </section>
+
+
+     <section class="slide" id="whySass">
+      <h2>Why use Sass?</h2>
+      <ul>
+        <li><h3>Less typing... make the robots work harder</h3></li>
+        <li><h3>More maintainable CSS</h3></li>
+      </ul>
+    </section>
+
+    <section class="slide" id="theOld">
+      <h2>CSS nitty griddy</h2>
+      <pre>
+.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {float:left;margin-right:10px;}
+.span-1 {width:30px;}
+.span-2 {width:70px;}
+.span-3 {width:110px;}
+.span-4 {width:150px;}
+.span-5 {width:190px;}
+.span-6 {width:230px;}
+.span-7 {width:270px;}
+.span-8 {width:310px;}
+.span-9 {width:350px;}
+.span-10 {width:390px;}
+.span-11 {width:430px;}
+.span-12 {width:470px;}
+.span-13 {width:510px;}
+.span-14 {width:550px;}
+.span-15 {width:590px;}
+.span-16 {width:630px;}
+.span-17 {width:670px;}
+.span-18 {width:710px;}
+.span-19 {width:750px;}
+.span-20 {width:790px;}
+.span-21 {width:830px;}
+.span-22 {width:870px;}
+.span-23 {width:910px;}
+.span-24 {width:950px;margin-right:0;}</pre>
+    </section>
+    <section class="slide" id="theNew">
+      <h2>Sass that produces the same results</h2>
+      <pre>
+@for $i from 1 through 24 {
+  .span-#{$i} {
+    width: $i * 30 + 10 * ( $i - 1 );
+    @if $i == 24 {margin-right:0px;}
+    @else{margin-right:10px;}
+  }
+}     </pre>
+    </section>
+    <section class="slide" id="theNew">
+      <h2>Why stop there?</h2>
+      <pre>
+$columns: 24;
+$column-width: 30px;
+$gutter-width: 10px;
+@for $i from 1 through $columns {
+  .span-#{$i} {
+    width: $i * $column-width + $gutter-width * ( $i - 1 );
+    @if $i == $columns {margin-right:0px;}
+    @else{margin-right:$gutter-width;}
+  }
+}</pre>
+    </section>
+    <section class="slide" id="yeahBut">
+      <h2>Sure, that&rsquo;s clever, but&hellip;</h2>
+      <ul>
+        <li><h3>What about all those classes?</h3></li>
+        <li><h3>Can we separate markup from style?</h3></li>
+        <li><h3>Doesn't really save typing... I just copy and paste from blueprint.</h3></li>
+      </ul>
+    </section>
+    <section class="slide" id="grid">
+      <h2>Grids from mixins</h2>
+      <pre>
+@mixin column($columns, $last: false) {
+  width: ($column-width * $columns) + ($gutter-width * ($columns - 1));
+  @if $last != true {
+    margin-right: $gutter-width;
+  }
+}
+
+@mixin padded-column($columns, $border-width: 0px, $last: false){
+  width: ($column-width * $columns) + ($gutter-width * ($columns - 1));
+  padding: $column-padding;
+  margin-top: $gutter-width - $column-padding - $border-width;
+  margin-bottom: $gutter-width - $column-padding - $border-width;
+  margin-left: -($column-padding + $border-width);
+  margin-right: -($column-padding + $border-width);
+  @if $last != true {
+    margin-right: $gutter-width - $column-padding - $border-width;
+  }
+}</pre>
+      </section>
+
+     <section class="slide" id="starPlayers">
+      <h2>How do you use that?</h2>
+      <pre>
+div[role="main"]{
+  @include column(2.5);
+  padding-left: ($column-width + $gutter-width)  * .25;
+  padding-right: ($column-width + $gutter-width)  * .25;
+  padding-top:1em;
+  background:rgba(0,0,0,.2);
+  float:left;
+}
+
+body>aside{
+  @include column(1.5, true);
+  padding-left: ($column-width + $gutter-width) * .25;
+  padding-right: ($column-width + $gutter-width) * .25;
+  display:block;
+  float:left;
+  background:rgba(0,0,0,.5);
+}</pre>
+      </section>
+
+      <section class="slide" id="sampleLayout">
+        <h2>A real layout sketch</h2> 
+        <img src="layoutSketch.jpg" alt="Layout Sketch">
+      </section>
+
+      <section class="slide" id="wireframe">
+      <h2>HTML version</h2> 
+      <img src="layoutWireframe.jpg" alt="Layout Sketch">
+    </section>
+    <section class="slide" id="wireframe">
+      <h2>Quick change</h2> 
+      <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
+    </section>
+
+     <section class="slide" id="bulletProof?">
+       <h1>Is it bullet proof?</h1>
+     </section>
+    <section class="slide" id="No">
+       <h1>No!</h1>
+     </section>
+
+     <section class="slide" id="No">
+       <h2>That&rsquo;s where compass comes in</h2>
+       <ul>
+         <li>Jquery for CSS</li>
+         <li>Common problems solved by the community</li>
+         <li>Extra goodies like project generation</li>
+       </ul>
+     </section>
+
+    <section class="slide" id="aprettyslickbutton" >
+      <h2> A pretty slick button</h2>
+        <pre>
+@mixin clean-pill-button($background: #666, $height: 48px){
+  $shadow: darken($background, 20%);
+  background: $background;
+  @include background-image(linear-gradient(rgba(255,255,255,.6),
+                                            rgba(255,255,255,.4) 50%,
+                                            rgba(255,255,255,0) 50%));
+  @include box-shadow($shadow 1px 1px 3px,
+                      inset lighten($background, 50%) 0px 1px 0);
+  color: #fff;
+  border: solid 1px $shadow;
+  height: $height;
+  padding-left:24px;
+  padding-right:24px;
+  @include border-radius($height/2);
+  @include text-shadow($shadow -1px -1px 0);
+  &amp;:hover{
+    @include text-shadow(none);
+    @include box-shadow(inset lighten($background, 20%) 0px -1px 0);
+    @include background-image(linear-gradient(rgba(255,255,255,.4),
+                                              rgba(255,255,255,.3) 50%,
+                                              rgba(255,255,255,0) 50%));
+  }
+}
+</pre>
+      </section>
+      <section class="slide" id="buttonScreenshot">
+        <h2>What that looks like</h2>
+        <img src="buttonscreenshot.png"/>
+      </section>
+
+      <section class="slide" id="gridBG">
+        <h2>Visual helper for your grid</h2>
+        <ul>
+          <li><h3>Easy to change</h3></li>
+          <li><h3>Fool resistant</h3></li>
+        </ul>
+        <pre>
+$grid-background-total-columns: 10;
+$grid-background-column-width: 68px;
+$grid-background-gutter-width: 24px;
+$grid-background-baseline-height: 24px;
+$grid-background-offset:24px;
+
+body{ @include grid-background();}</pre>
+</section>
+
+
+      <section class="slide" id="serve">
+        <h2 >Serve</h2>
+        <ul>
+          <li><h3>Dynamic when editing</h3></li>
+          <li><h3>Makes vanilla HTML and CSS from Haml and Sass</h3></li>
+          <li><h3>Awesome for prototyping</h3></li>
+        </ul>
+      </section>
+
+      <section class="slide" id="minimaldrupaltheme">
+        <h2 >Minimal Drupal theme</h2>
+        <ul>
+          <li><h3>Not a great way for you to learn Drupal themeing (I warned you)</h3></li>
+          <li><h3>Not minimal in terms of appearance</h3></li>
+          <li><h3>Devel module</h3></li>
+        </ul>
+      </section>
+
+      <section class="slide" id="tools" >
+        <h2 >Tools</h2>
+        <ul>
+          <li><a href="http://sass-lang.com/" title="Sass">Sass</a></li>
+          <li><a href="http://compass-style.org/" title="Compass">Compass</a></li>
+          <li><a href="http://get-serve.com/" title="Serve">Serve</a></li>
+          <li><a href="http://lessframework.com/" title="Less Framework">Less Framework</a></li>
+          <li><a href="https://github.com/RyanParsley/Serve-Less" title="Serve-Less">My Serve based starting point</a></li>
+          <li><a href="http://drupal.org/sandbox/RyanParsley/1317494" title="Lessie">My Drupal starter theme</a></li>
+        </ul>
+      </section>
+
+      <section class="slide" id="morereading">
+        <h2 >More Reading</h2>
+        <ul>
+          <li><a href="http://www.stuffandnonsense.co.uk/blog/about/time_to_stop_showing_clients_static_design_visuals/">Time to stop showing clients static design visuals</a></li>
+          <li><a href="http://24ways.org/2009/make-your-mockup-in-markup" title="Make your mockup in markup">Meagan Fisher&#8217;s 24ways post</a></li>
+          <li><a href="http://jeffcroft.com/sidenotes/2009/may/20/applying-oop-concepts-css/" title="On applying OOP concepts to CSS">Jeff Croft on Object Oriented CSS</a></li>
+          <li><a href="http://thesassway.com/" title="The Sass Way">The Sass Way</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Dieter_Rams#cite_note-0">Dieter Rams</a></li>
+          <li><a href="http://smacss.com/">SMACSS</a></li>
+        </ul>
+      </section>
+
+      <section class="slide" id="thanks" >
+        <h1>Thanks!</h1>
+      </section>
+
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+      <p class="deck-status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+      </p>
+
+      <form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+      </form>
+
+      <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+      <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+      <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+        <!-- Deck Core and extensions -->
+        <script src="../core/deck.core.js"></script>
+        <script src="../extensions/hash/deck.hash.js"></script>
+        <script src="../extensions/menu/deck.menu.js"></script>
+        <script src="../extensions/goto/deck.goto.js"></script>
+        <script src="../extensions/status/deck.status.js"></script>
+        <script src="../extensions/navigation/deck.navigation.js"></script>
+
+        <!-- Specific to this page -->
+        <script src="introduction.js"></script>
+
+      </body>
+    </html>
