@@ -197,7 +197,40 @@ body>aside{
   background:rgba(0,0,0,.5);
 }</pre>
       </section>
-
+      <section class="slide" id="guitarTabSCSS">
+      <h2>More fun with style generation</h2>
+      <pre>
+@function fingerOffset($finger){
+  @return $finger * (-20px);
+}
+@function fretOffset($fret){
+  @return $fret * 20px - 20px;
+}
+@for $finger from 1 to 5{
+  @for $fret from 1 to 6{
+    .finger#{$finger}.fret#{$fret}{
+      background-position: fingerOffset($finger) fretOffset($fret);
+    }
+  }
+}</pre>
+      </section>
+      <section class="slide" id="grid">
+        <h2>Grids from mixins</h2>
+        <pre>
+<div class="chord">
+  <h1>E7</h1>
+  <span class="offset">1</span>
+  <ol class="strings">
+    <li class="open">E</li>
+    <li class="finger2 fret2">B</li>
+    <li class="finger3 fret2">E</li>
+    <li class="finger1 fret1">G#</li>
+    <li class="finger4 fret3">D</li>
+    <li class="open">E</li>
+  </ol>
+</div>
+</pre>
+      </section>
       <section class="slide" id="wireframe">
         <h2>HTML version</h2> 
         <img src="layoutWireframe.jpg" alt="Layout Sketch">

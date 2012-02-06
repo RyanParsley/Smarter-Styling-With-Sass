@@ -1,129 +1,146 @@
+html {
+  background: #aa5c16 url(woodBG.png) fixed; }
+
 body {
-  background: #eee; }
+  background: #dddddd url(lightNoise.png);
+  margin: 0 auto;
+  width: 70%;
+  max-width: 780px;
+  padding: 1em 1em 2em;
+  font-family: "helvetica nueue", helvetica, arial, sans-serif; }
+
+body > h1 {
+  color: #665ecd;
+  text-shadow: #333333 -1px -1px 0, white 1px 1px 0;
+  background: #ebea86 url(lightNoise.png);
+  margin-left: -2em;
+  padding: .5em 1em .25em;
+  border-radius: 3px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 51, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.5); }
+  body > h1 em {
+    text-shadow: #999 1px 1px 0;
+    color: #fff; }
+
+h1 {
+  font-family: 'Vast Shadow', cursive;
+  font-family: 'Raleway', cursive;
+  font-family: 'Carter One', cursive;
+  font-family: 'Slackey', cursive; }
+  h1 em {
+    font-family: 'Raleway', cursive;
+    font-family: 'Aguafina Script', cursive;
+    font-size: 1.2em;
+    font-style: normal; }
+
+h2 {
+  color: #bc0a0a; }
+
+h2, h3, h4, h5 {
+  font-family: 'Slackey', cursive;
+  border-bottom: 1px solid #333; }
 
 .chord {
   width: 120px;
   background: #fff;
   margin-left: 60px;
-  position: relative; }
-
-.chord h1 {
-  text-align: center;
-  background: #aaa;
-  margin: 0;
-  border-bottom: 1px solid #000; }
-
-.chord ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: url(fretsAndStrings.png); }
-
-.chord li {
-  margin: 0;
-  padding: 0;
-  width: 20px;
-  display: block;
-  float: left;
-  text-align: center;
-  padding-top: 119px;
-  background: url(fingerSprite.png) 0 0 no-repeat;
-  margin-bottom: -20px; }
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2em;
+  border-radius: 3px 3px 0px 0px;
+  font-size: .8em; }
+  .chord h1 {
+    text-align: center;
+    background: #aaaaaa url(lightNoise.png);
+    margin: 0;
+    border-bottom: 1px solid #000;
+    border-radius: 3px 3px 0px 0px;
+    color: #665ecd;
+    text-shadow: #444444 -1px -1px 0, #cccccc 1px 1px 0; }
+  .chord ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: url(fretsAndStrings.png); }
+  .chord li {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 119px;
+    background: url(fingerSprite.png) 0 0 no-repeat;
+    margin-bottom: -20px; }
+  .chord .offset {
+    display: block;
+    position: absolute;
+    left: -20px; }
 
 .chord li.open {
   background-image: none; }
 
-.chord li.fret1 {
-  background-position: -60px 0px; }
-
-.chord li.fret2 {
-  background-position: -40px 20px; }
-
-.chord li.fret3 {
-  background-position: -20px 40px; }
-
 .chord li:last-child {
   border-right: none; }
 
-.string1 .fret1 {
-  background-position: -40px 0px; }
-
-.string1 .fret2 {
-  background-position: -40px 20px; }
-
-.string1 .fret3 {
-  background-position: -40px 40px; }
-
-.string1 .fret4 {
-  background-position: -40px 60px; }
-
-.string1 .fret5 {
-  background-position: -40px 80px; }
-
-.string2 .fret1 {
+.finger1.fret1 {
   background-position: -20px 0px; }
 
-.string2 .fret2 {
+.finger1.fret2 {
   background-position: -20px 20px; }
 
-.string2 .fret3 {
+.finger1.fret3 {
   background-position: -20px 40px; }
 
-.string2 .fret4 {
+.finger1.fret4 {
   background-position: -20px 60px; }
 
-.string2 .fret5 {
+.finger1.fret5 {
   background-position: -20px 80px; }
 
-.string3 .fret1 {
-  background-position: 0px 0px; }
+.finger2.fret1 {
+  background-position: -40px 0px; }
 
-.string3 .fret2 {
-  background-position: 0px 20px; }
+.finger2.fret2 {
+  background-position: -40px 20px; }
 
-.string3 .fret3 {
-  background-position: 0px 40px; }
+.finger2.fret3 {
+  background-position: -40px 40px; }
 
-.string3 .fret4 {
-  background-position: 0px 60px; }
+.finger2.fret4 {
+  background-position: -40px 60px; }
 
-.string3 .fret5 {
-  background-position: 0px 80px; }
+.finger2.fret5 {
+  background-position: -40px 80px; }
 
-.string4 .fret1 {
-  background-position: 20px 0px; }
+.finger3.fret1 {
+  background-position: -60px 0px; }
 
-.string4 .fret2 {
-  background-position: 20px 20px; }
+.finger3.fret2 {
+  background-position: -60px 20px; }
 
-.string4 .fret3 {
-  background-position: 20px 40px; }
+.finger3.fret3 {
+  background-position: -60px 40px; }
 
-.string4 .fret4 {
-  background-position: 20px 60px; }
+.finger3.fret4 {
+  background-position: -60px 60px; }
 
-.string4 .fret5 {
-  background-position: 20px 80px; }
+.finger3.fret5 {
+  background-position: -60px 80px; }
 
-.string5 .fret1 {
-  background-position: 40px 0px; }
+.finger4.fret1 {
+  background-position: -80px 0px; }
 
-.string5 .fret2 {
-  background-position: 40px 20px; }
+.finger4.fret2 {
+  background-position: -80px 20px; }
 
-.string5 .fret3 {
-  background-position: 40px 40px; }
+.finger4.fret3 {
+  background-position: -80px 40px; }
 
-.string5 .fret4 {
-  background-position: 40px 60px; }
+.finger4.fret4 {
+  background-position: -80px 60px; }
 
-.string5 .fret5 {
-  background-position: 40px 80px; }
-
-.chord .offset {
-  display: block;
-  position: absolute;
-  left: -20px; }
+.finger4.fret5 {
+  background-position: -80px 80px; }
 
 .clearfix:after, .chord ol:after {
   content: ".";
