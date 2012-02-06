@@ -1,0 +1,66 @@
+body{
+  background:#eee;
+}
+.chord{
+  width:120px;
+  background:#fff;
+  margin-left:60px;
+  position:relative;
+}
+.chord h1{
+  text-align:center; 
+  background:#aaa;
+  margin:0;
+  border-bottom:1px solid #000;
+}
+.chord ol{
+  list-style:none;
+  margin:0;
+  padding:0;
+  background:url(fretsAndStrings.png);
+}
+.chord li{
+  margin:0;
+  padding:0;
+  width:20px; 
+  display:block;
+  float:left;
+  text-align:center;
+  padding-top:119px;
+  background:url(fingerSprite.png) 0 0 no-repeat;
+  margin-bottom:-20px;
+}
+.chord li.open{background-image:none;}
+.chord li.fret1{background-position: -60px 0px;}
+.chord li.fret2{background-position: -40px 20px;}
+.chord li.fret3{background-position: -20px 40px;}
+.chord li:last-child{border-right:none;}
+
+@function stringOffset($string){
+  @return $string * 20px - 60px;
+}
+
+@function fretOffset($fret){
+  @return $fret * 20px - 20px;
+}
+
+@for $string from 1 to 6{
+  @for $fret from 1 to 6{
+    .string#{$string} .fret#{$fret}{
+      background-position: stringOffset($string) fretOffset($fret);
+    }
+  }
+}
+
+.chord .offset{
+  display:block;
+  position:absolute;
+  left:-20px;
+}
+.clearfix:after, .chord ol:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

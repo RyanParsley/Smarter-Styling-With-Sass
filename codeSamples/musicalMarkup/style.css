@@ -1,0 +1,133 @@
+body {
+  background: #eee; }
+
+.chord {
+  width: 120px;
+  background: #fff;
+  margin-left: 60px;
+  position: relative; }
+
+.chord h1 {
+  text-align: center;
+  background: #aaa;
+  margin: 0;
+  border-bottom: 1px solid #000; }
+
+.chord ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: url(fretsAndStrings.png); }
+
+.chord li {
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  display: block;
+  float: left;
+  text-align: center;
+  padding-top: 119px;
+  background: url(fingerSprite.png) 0 0 no-repeat;
+  margin-bottom: -20px; }
+
+.chord li.open {
+  background-image: none; }
+
+.chord li.fret1 {
+  background-position: -60px 0px; }
+
+.chord li.fret2 {
+  background-position: -40px 20px; }
+
+.chord li.fret3 {
+  background-position: -20px 40px; }
+
+.chord li:last-child {
+  border-right: none; }
+
+.string1 .fret1 {
+  background-position: -40px 0px; }
+
+.string1 .fret2 {
+  background-position: -40px 20px; }
+
+.string1 .fret3 {
+  background-position: -40px 40px; }
+
+.string1 .fret4 {
+  background-position: -40px 60px; }
+
+.string1 .fret5 {
+  background-position: -40px 80px; }
+
+.string2 .fret1 {
+  background-position: -20px 0px; }
+
+.string2 .fret2 {
+  background-position: -20px 20px; }
+
+.string2 .fret3 {
+  background-position: -20px 40px; }
+
+.string2 .fret4 {
+  background-position: -20px 60px; }
+
+.string2 .fret5 {
+  background-position: -20px 80px; }
+
+.string3 .fret1 {
+  background-position: 0px 0px; }
+
+.string3 .fret2 {
+  background-position: 0px 20px; }
+
+.string3 .fret3 {
+  background-position: 0px 40px; }
+
+.string3 .fret4 {
+  background-position: 0px 60px; }
+
+.string3 .fret5 {
+  background-position: 0px 80px; }
+
+.string4 .fret1 {
+  background-position: 20px 0px; }
+
+.string4 .fret2 {
+  background-position: 20px 20px; }
+
+.string4 .fret3 {
+  background-position: 20px 40px; }
+
+.string4 .fret4 {
+  background-position: 20px 60px; }
+
+.string4 .fret5 {
+  background-position: 20px 80px; }
+
+.string5 .fret1 {
+  background-position: 40px 0px; }
+
+.string5 .fret2 {
+  background-position: 40px 20px; }
+
+.string5 .fret3 {
+  background-position: 40px 40px; }
+
+.string5 .fret4 {
+  background-position: 40px 60px; }
+
+.string5 .fret5 {
+  background-position: 40px 80px; }
+
+.chord .offset {
+  display: block;
+  position: absolute;
+  left: -20px; }
+
+.clearfix:after, .chord ol:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
