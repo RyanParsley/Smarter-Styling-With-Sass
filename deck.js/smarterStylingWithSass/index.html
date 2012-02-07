@@ -28,7 +28,7 @@
     <link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
 
     <!-- Custom CSS just for this page -->
-    <link rel="stylesheet" href="designInTheBrowser.css">
+    <link rel="stylesheet" href="ssws.css">
 
     <script src="../modernizr.custom.js"></script>
   </head>
@@ -107,17 +107,7 @@
 .span-10 {width:390px;}
 .span-11 {width:430px;}
 .span-12 {width:470px;}
-.span-13 {width:510px;}
-.span-14 {width:550px;}
-.span-15 {width:590px;}
-.span-16 {width:630px;}
-.span-17 {width:670px;}
-.span-18 {width:710px;}
-.span-19 {width:750px;}
-.span-20 {width:790px;}
-.span-21 {width:830px;}
-.span-22 {width:870px;}
-.span-23 {width:910px;}
+[ &hellip;all the way down to&hellip; ]
 .span-24 {width:950px;margin-right:0;}</pre>
     </section>
     <section class="slide" id="theNew">
@@ -197,6 +187,17 @@ body>aside{
   background:rgba(0,0,0,.5);
 }</pre>
       </section>
+
+      <section class="slide" id="wireframe">
+        <h2>HTML version</h2> 
+        <img src="layoutWireframe.jpg" alt="Layout Sketch">
+      </section>
+
+      <section class="slide" id="wireframe">
+        <h2>Quick change</h2> 
+        <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
+      </section>
+
       <section class="slide" id="guitarTabSCSS">
       <h2>More fun with style generation</h2>
       <pre>
@@ -231,15 +232,6 @@ body>aside{
 &lt;/div&gt;
 </pre>
       </section>
-      <section class="slide" id="wireframe">
-        <h2>HTML version</h2> 
-        <img src="layoutWireframe.jpg" alt="Layout Sketch">
-      </section>
-      <section class="slide" id="wireframe">
-        <h2>Quick change</h2> 
-        <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
-      </section>
-
       <section class="slide" id="bulletProof?">
         <h1>Is it bullet proof?</h1>
       </section>
@@ -279,10 +271,7 @@ body>aside{
     @include box-shadow(inset lighten($background, 20%) 0px -1px 0);
     @include background-image(linear-gradient(rgba(255,255,255,.4),
                                               rgba(255,255,255,.3) 50%,
-                                              rgba(255,255,255,0) 50%));
-  }
-}
-</pre>
+                                              rgba(255,255,255,0) 50%));}}</pre>
       </section>
       <section class="slide" id="buttonScreenshot">
         <h2>What that looks like</h2>
@@ -360,7 +349,7 @@ body{ @include grid-background();}</pre>
         <script src="../extensions/navigation/deck.navigation.js"></script>
 
         <!-- Specific to this page -->
-        <script src="introduction.js"></script>
+        <script src="ssws.js"></script>
 
       </body>
     </html>
