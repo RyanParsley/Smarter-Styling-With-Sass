@@ -50,6 +50,11 @@
   z-index: 3; }
 .deck-container pre {
   font-size: .85em; }
+.deck-container h1 span {
+  color: #888;
+  font-size: .5em;
+  text-align: right;
+  display: block; }
 
 @media print {
   .theme-menu {

@@ -36,49 +36,52 @@
   <body class="deck-container">
 
     <section class="slide" id="title-slide">
-      <h1>Smarter styling with&nbsp;Sass</h1>
+      <h1>Smarter styling with&nbsp;Sass
+        <span>&mdash;@RyanParsley</span></h1>
+
     </section>
 
     <section class="slide" id="tldr">
       <h2>TLDR</h2>
       <ol>
         <li><h3>Sass compiles to plain old CSS</h3></li>
-        <li><h3>&hellip; which means it adds no server side dependancies</h3></li>
+        <li><h3>&#8756; it adds no server side dependencies</h3></li>
         <li><h3>Sass makes CSS better</h3></li>
         <li><h3>Compass makes Sass better</h3></li>
         <li><h3>Sass is not a Rails thing</h3></li>
+        <li><h3><a href="http://ssws.ryanparsley.com">ssws.ryanparsley.com (or find me on github)</a></h3></li>
       </ol>
     </section>
 
     <section class="slide" id="atOurDisposal">
       <h2>CSS is filling out nicely</h2> 
       <ul>
-        <li>
-          <h3>Dropshadows</h3>
+        <li class="slide">
+          <h3>Drop shadows</h3>
         </li>
-        <li>
+        <li class="slide">
           <h3>Gradients</h3>
         </li>
-        <li>
+        <li class="slide">
           <h3>Rounded corners</h3>
         </li>
-        <li>
+        <li class="slide">
           <h3>Border images</h3>
         </li>
-        <li>
+        <li class="slide">
           <h3>Multiple background images</h3>
         </li>
-        <li>
-          <h3>Webfonts</h3>
+        <li class="slide">
+          <h3>Web fonts</h3>
         </li>
-        <li>
+        <li class="slide">
           <h3>RGBA (Translucency!) </h3>
         </li>
       </ul>
     </section>
-
+    
     <section class="slide" id="beMindfulOf">
-      <h1>There are some antipattens brewing</h1>
+      <h1>There are some antipatterns brewing</h1>
     </section>
 
      <section class="slide" id="whySass">
@@ -90,6 +93,13 @@
         <li><h3>Easier to read is easier to maintain</h3></li>
       </ul>
     </section>
+    <section class="slide" id="sassArchitecture">
+        <h2>One less excuse to not</h2>
+        <blockquote cite="http://thesassway.com/articles/sass-doesnt-create-bad-code-bad-coders-do">
+          <p>Sass doesn&rsquo;t have anything to do with your architectural approach. Tell it what to do, and it will do it.</p>
+          <p><cite>&mdash;Roy Tomeij</cite></p>
+        </blockquote>
+      </section>
 
     <section class="slide" id="theOld">
       <h2>CSS nitty griddy</h2>
@@ -119,9 +129,9 @@
     @if $i == 24 {margin-right:0px;}
     @else{margin-right:10px;}
   }
-}     </pre>
+}</pre>
     </section>
-    <section class="slide" id="theNew">
+    <section class="slide" id="theNew2.0">
       <h2>Why stop there?</h2>
       <pre>
 $columns: 24;
@@ -140,10 +150,10 @@ $gutter-width: 10px;
       <ul>
         <li><h3>What about all those classes?</h3></li>
         <li><h3>Can we separate markup from style?</h3></li>
-        <li><h3>Doesn't really save typing... I just copy and paste from blueprint.</h3></li>
+        <li><h3>Doesn&rsquo;t really save typing... I just copy and paste from blueprint.</h3></li>
       </ul>
     </section>
-    <section class="slide" id="grid">
+    <section class="slide" id="gridFromMixins">
       <h2>Grids from mixins</h2>
       <pre>
 @mixin column($columns, $last: false) {
@@ -166,7 +176,7 @@ $gutter-width: 10px;
 }</pre>
       </section>
 
-     <section class="slide" id="starPlayers">
+     <section class="slide" id="howToUseMixins">
       <h2>How do you use that?</h2>
       <pre>
 div[role="main"]{
@@ -194,7 +204,7 @@ body>aside{
         <a href="http://ssws.ryanparsley.com/codeSamples/SimpleLayoutSketch/">Demo</a>
       </section>
 
-      <section class="slide" id="wireframe">
+      <section class="slide" id="wireframe2">
         <h2>Quick change</h2> 
         <img src="layoutWireframeBlue.jpg" alt="Layout Sketch">
       </section>
@@ -245,14 +255,41 @@ body>aside{
       <section class="slide" id="No">
         <h2>That&rsquo;s where Compass comes in</h2>
         <ul>
-         <li><h3>Jquery for CSS</h3></li>
+         <li><h3>jQuery for CSS</h3></li>
          <li><h3>Common problems solved by the community</h3></li>
          <li><h3>Extra goodies like project generation</h3></li>
         </ul>
       </section>
+      <section class="slide" id="vendorPrefixes">
+        <h2>One style to rule them all</h2>
+        <blockquote cite="https://twitter.com/#!/chriseppstein/status/166925704561311745">
+          <p>Compass users, don&rsquo;t worry about vendor prefixes. We&rsquo;ll make sure your site works no matter how bad the CSSWG effs things up.</p>
+          <p><cite>&mdash;Chris Eppstein (The Compass Guy)</cite></p>
+        </blockquote>
+      </section>
+      <section class="slide" id="gridBG">
+        <h2>Visual helper for your grid</h2>
+        <ul>
+          <li><h3>Easy to change</h3></li>
+          <li><h3>Fool resistant</h3></li>
+        </ul>
+        <pre>
+$grid-background-total-columns: 10;
+$grid-background-column-width: 68px;
+$grid-background-gutter-width: 24px;
+$grid-background-baseline-height: 24px;
+$grid-background-offset:24px;
 
+body{ @include grid-background();}</pre>
+      </section>
+     
+    
+      <section class="slide" id="buttonScreenshot">
+        <h2>Look Ma, no images!</h2>
+        <img src="buttonScreenshot.png"/>
+      </section>
       <section class="slide" id="aprettyslickbutton" >
-        <h2> A pretty slick button</h2>
+        <h2>A pretty slick button</h2>
           <pre>
 @mixin clean-pill-button($background: #666, $height: 48px){
   $shadow: darken($background, 20%);
@@ -276,25 +313,10 @@ body>aside{
                                               rgba(255,255,255,.3) 50%,
                                               rgba(255,255,255,0) 50%));}}</pre>
       </section>
-      <section class="slide" id="buttonScreenshot">
-        <h2>What that looks like</h2>
-        <img src="buttonScreenshot.png"/>
-      </section>
-      <section class="slide" id="gridBG">
-        <h2>Visual helper for your grid</h2>
-        <ul>
-          <li><h3>Easy to change</h3></li>
-          <li><h3>Fool resistant</h3></li>
-        </ul>
-        <pre>
-$grid-background-total-columns: 10;
-$grid-background-column-width: 68px;
-$grid-background-gutter-width: 24px;
-$grid-background-baseline-height: 24px;
-$grid-background-offset:24px;
-
-body{ @include grid-background();}</pre>
-      </section>
+    <section class="slide" id="thatAwesome">
+      <h1>It really is <em>that</em> awesome!</h1>
+      </section> 
+      
       <section class="slide" id="tools" >
         <h2 >Tools</h2>
         <ul>
