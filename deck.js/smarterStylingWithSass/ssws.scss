@@ -20,7 +20,7 @@
 		.js & {
 			display:block;
 		}
-
+    
 		h2 {
 			float:left;
 			font-size:20px;
@@ -60,8 +60,14 @@
     z-index:3;
   }
   pre{font-size:.85em;}
+  
+h1 span{
+  color:#888;
+      font-size:.5em;
+      text-align:right;
+      display:block;
+    }
 }
-
 
 @media print {
 	.theme-menu {
